@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[COMPANY NAME] | Building Construction & Engineering, Coimbatore</title>
+<meta name="description" content="Premium building construction and engineering company delivering residential, commercial and industrial projects with precision engineering and advanced technology.">
+<meta name="keywords" content="construction company, building contractor, structural engineering, turnkey projects, Coimbatore, BIM">
+<meta property="og:title" content="[COMPANY NAME] | Building the Future. Engineering Excellence.">
+<meta property="og:description" content="Residential, commercial and industrial construction with precision engineering.">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23111'/%3E%3Crect x='500' y='120' width='200' height='420' fill='%23c9a24b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<style>
+:root{--bg:#0d0e10;--bg2:#15171a;--line:rgba(255,255,255,.1);--tx:#f2f2f0;--mu:#a0a3a8;--ac:#d9a441;--ac2:#ff7a1a;--gl:rgba(255,255,255,.05)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.dsp{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;line-height:1.05;font-weight:500;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+img,svg,canvas{max-width:100%}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.wrap{width:min(1240px,92%);margin:auto}
+section{padding:clamp(70px,10vw,130px) 0;position:relative}
+.eyebrow{color:var(--ac);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:36px;height:1px;background:var(--ac)}
+h2{font-size:clamp(2rem,5vw,4rem);max-width:16em;margin-bottom:24px}
+.sub{color:var(--mu);max-width:44em}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border:1px solid var(--ac);background:var(--ac);color:#111;font-weight:600;letter-spacing:.08em;font-size:.82rem;text-transform:uppercase;cursor:pointer;position:relative;overflow:hidden;transition:.3s;min-height:48px}
+.btn.o{background:transparent;color:var(--tx);border-color:rgba(255,255,255,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(217,164,65,.25)}
+.btn.o:hover{border-color:var(--ac);color:var(--ac)}
+.btn span{transition:.3s}.btn:hover span{transform:translateX(5px)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* loader */
+#pl{position:fixed;inset:0;background:#0a0a0b;z-index:999;display:grid;place-items:center;transition:opacity .7s,visibility .7s}
+#pl.h{opacity:0;visibility:hidden}
+#pl div{text-align:center}#pl b{display:block;font:500 1.6rem Oswald;letter-spacing:.3em}
+#pl i{display:block;width:180px;height:2px;background:var(--line);margin:18px auto 0;overflow:hidden}
+#pl i:after{content:"";display:block;height:100%;width:40%;background:var(--ac);animation:ld 1.1s infinite ease-in-out}
+@keyframes ld{from{transform:translateX(-100%)}to{transform:translateX(280%)}}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s}
+header.s{padding:12px 0;background:rgba(13,14,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font:600 1.25rem Oswald;letter-spacing:.14em;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo:before{content:"";width:16px;height:22px;background:linear-gradient(135deg,var(--ac),var(--ac2));clip-path:polygon(0 30%,50% 0,100% 30%,100% 100%,0 100%)}
+.links{display:flex;gap:26px;list-style:none}
+.links a{font-size:.72rem;letter-spacing:.14em;color:var(--mu);padding:8px 0;position:relative;transition:.3s;font-weight:500}
+.links a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--ac);transition:.3s}
+.links a:hover,.links a.on{color:var(--tx)}.links a.on:after,.links a:hover:after{width:100%}
+.nq{padding:12px 22px;min-height:44px}
+.burger{display:none;width:46px;height:46px;background:none;border:1px solid var(--line);cursor:pointer;position:relative}
+.burger i,.burger:before,.burger:after{content:"";position:absolute;left:12px;right:12px;height:2px;background:#fff;transition:.3s}
+.burger:before{top:15px}.burger i{top:22px}.burger:after{top:29px}
+.burger.x:before{top:22px;transform:rotate(45deg)}.burger.x:after{top:22px;transform:rotate(-45deg)}.burger.x i{opacity:0}
+/* hero */
+#home{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;background:radial-gradient(ellipse at 75% 40%,#2a2418 0,transparent 55%),linear-gradient(180deg,#0d0e10,#141518)}
+#home:before{content:"";position:absolute;inset:0;background:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(circle at 70% 50%,#000,transparent 70%)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+h1{font-size:clamp(2.6rem,7vw,6rem);margin-bottom:28px}
+h1 span{display:block;overflow:hidden}h1 span em{display:block;font-style:normal;transform:translateY(105%);animation:up 1s .3s forwards cubic-bezier(.2,.7,.2,1)}
+h1 span:nth-child(2) em{animation-delay:.5s;color:var(--ac)}
+@keyframes up{to{transform:none}}
+.hp{color:var(--mu);max-width:34em;font-size:1.08rem;margin-bottom:36px}
+.hb{display:flex;gap:14px;flex-wrap:wrap}
+.sky{position:relative;aspect-ratio:4/5;max-height:620px;justify-self:end;width:100%;max-width:480px}
+.sky svg{width:100%;height:100%}
+.sky .tag{position:absolute;left:0;bottom:8%;padding:10px 16px;background:rgba(20,21,24,.7);backdrop-filter:blur(10px);border:1px solid var(--line);font-size:.68rem;letter-spacing:.25em;color:var(--ac);display:flex;gap:10px;align-items:center}
+.tag:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ac);animation:pl 1.6s infinite}
+@keyframes pl{50%{opacity:.25;transform:scale(1.5)}}
+.sk{animation:fl 7s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-12px)}}
+/* about */
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:40px;border:1px solid var(--line)}
+.stats div{background:var(--bg);padding:26px}
+.stats b{display:block;font:500 3rem Oswald;color:var(--ac);line-height:1}.stats small{color:var(--mu);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.aimg{aspect-ratio:4/5;position:relative;background:linear-gradient(160deg,#2b2d31,#101113);overflow:hidden}
+.aimg .fc{position:absolute;inset:0}
+.fcard{position:absolute;right:-24px;bottom:36px;background:rgba(21,23,26,.82);backdrop-filter:blur(14px);border:1px solid var(--line);padding:22px 26px;max-width:260px;border-left:3px solid var(--ac)}
+.fcard b{font:500 1.6rem Oswald;color:var(--ac)}
+/* services */
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:50px}
+.sc{background:var(--bg);padding:32px 26px;min-height:300px;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:.5s;cursor:default}
+.sc:before{content:"";position:absolute;inset:0;background:var(--art);opacity:0;transition:.6s;transform:scale(1.15)}
+.sc:hover:before{opacity:.5;transform:scale(1)}
+.sc>*{position:relative}.sc:hover{transform:translateY(-4px)}
+.sc .n{color:var(--mu);font:400 .8rem Oswald;letter-spacing:.2em}
+.sc .ic{font-size:2rem;color:var(--ac);margin:22px 0 14px;line-height:1}
+.sc h3{font-size:1.3rem;margin-bottom:10px}.sc p{color:var(--mu);font-size:.9rem}.sc:hover p{color:#ddd}
+.sc .ar{margin-top:auto;padding-top:20px;color:var(--ac);font-size:1.4rem;transition:.3s}.sc:hover .ar{transform:translateX(8px)}
+/* 3d */
+#experience{background:var(--bg2);padding-bottom:80px}
+.vw{position:relative;height:min(78vh,720px);min-height:460px;margin-top:40px;border:1px solid var(--line);background:#0a0c12;overflow:hidden;touch-action:none;user-select:none}
+.vw.fs{height:100vh}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}#cv:active{cursor:grabbing}
+.vlab{position:absolute;left:18px;top:18px;padding:8px 14px;background:rgba(15,16,18,.6);backdrop-filter:blur(8px);border:1px solid var(--line);font-size:.66rem;letter-spacing:.24em;color:var(--ac);pointer-events:none;z-index:3}
+.tb{position:absolute;right:14px;top:14px;display:flex;flex-direction:column;gap:6px;z-index:4}
+.tb button,.hs button{background:rgba(15,16,18,.72);backdrop-filter:blur(8px);border:1px solid var(--line);min-width:44px;min-height:44px;padding:0 12px;cursor:pointer;font-size:.72rem;letter-spacing:.08em;transition:.25s}
+.tb button:hover,.tb button.on,.hs button:hover,.hs button.on{background:var(--ac);color:#111;border-color:var(--ac)}
+.hs{position:absolute;left:0;right:0;bottom:0;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:12px;z-index:3;background:linear-gradient(0deg,rgba(0,0,0,.6),transparent)}
+.hs button{font-size:.66rem;letter-spacing:.16em}
+.dot{position:absolute;z-index:2;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid var(--ac);background:rgba(217,164,65,.25);cursor:pointer;display:none;padding:0}
+.dot:after{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--ac)}
+.dot:before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--ac);animation:rp 2s infinite}
+@keyframes rp{to{transform:scale(1.9);opacity:0}}
+.info{position:absolute;left:18px;top:62px;width:min(320px,calc(100% - 90px));background:rgba(15,16,18,.8);backdrop-filter:blur(16px);border:1px solid var(--line);border-left:3px solid var(--ac);padding:22px;z-index:5;transform:translateX(-20px);opacity:0;visibility:hidden;transition:.45s}
+.info.o{transform:none;opacity:1;visibility:visible}
+.info h3{font-size:1.3rem;color:var(--ac);margin-bottom:8px}.info p{color:#cfd0d2;font-size:.92rem}
+.info button{position:absolute;right:8px;top:8px;background:none;border:0;width:40px;height:40px;font-size:1.4rem;cursor:pointer}
+.vl{position:absolute;inset:0;z-index:10;background:#090a0d;display:grid;place-items:center;text-align:center;padding:20px;transition:opacity .7s,visibility .7s}
+.vl.h{opacity:0;visibility:hidden}
+.vl small{letter-spacing:.3em;color:var(--mu);font-size:.7rem;display:block}
+.vl code{display:block;font:500 1.1rem monospace;color:var(--ac);margin:16px 0 6px}
+.vl .bar{width:min(340px,80vw);height:3px;background:var(--line);margin:0 auto 12px}.vl .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:width .2s}
+.vl .btn{margin-top:22px;display:none}
+.fb{display:none;position:absolute;inset:0;background:linear-gradient(180deg,#151821,#0a0b0e)}.fb svg{width:100%;height:100%}
+/* projects */
+.fl{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 34px}
+.fl button{background:none;border:1px solid var(--line);padding:11px 20px;min-height:44px;font-size:.72rem;letter-spacing:.16em;cursor:pointer;color:var(--mu);transition:.3s}
+.fl button:hover{color:var(--tx)}.fl button.on{background:var(--ac);border-color:var(--ac);color:#111}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pc{position:relative;aspect-ratio:4/5;overflow:hidden;cursor:pointer;background:none;border:0;text-align:left;display:block;width:100%;transition:opacity .45s,transform .45s}
+.pc.hide{opacity:0;transform:scale(.92)}
+.pc .im{position:absolute;inset:0;background:var(--art);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.pc:hover .im{transform:scale(1.08)}
+.pc .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent 60%);padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+.pc h3{font-size:1.5rem}.pc p{color:var(--mu);font-size:.88rem}.pc .m{color:var(--ac);font-size:.72rem;letter-spacing:.16em;margin-top:8px;text-transform:uppercase}
+.pc .go{position:absolute;right:20px;top:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:grid;place-items:center;opacity:0;transform:scale(.6);transition:.4s}.pc:hover .go{opacity:1;transform:none}
+.md{position:fixed;inset:0;z-index:300;background:rgba(8,8,9,.97);display:none;overflow:auto}
+.md.o{display:block;animation:fi .4s}@keyframes fi{from{opacity:0}}
+.md .cl{position:fixed;right:20px;top:20px;width:50px;height:50px;border:1px solid var(--line);background:rgba(0,0,0,.6);font-size:1.6rem;cursor:pointer;z-index:2}
+.mh{height:min(60vh,520px);background:var(--art);position:relative}.mh:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080809,transparent 60%)}
+.mb{width:min(1000px,92%);margin:-70px auto 80px;position:relative;z-index:1}
+.mb h2{margin-bottom:10px}.ms{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
+.ms div{background:#0d0e10;padding:18px}.ms small{display:block;color:var(--mu);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}.ms b{font:500 1.15rem Oswald;color:var(--ac)}
+/* process */
+.tl{position:relative;margin-top:60px;padding-left:0}
+.tl:before,.tl:after{content:"";position:absolute;left:50%;top:0;width:2px;margin-left:-1px}
+.tl:before{bottom:0;background:var(--line)}
+.tl:after{height:calc(var(--p,0)*100%);background:linear-gradient(var(--ac),var(--ac2));box-shadow:0 0 14px var(--ac)}
+.st{display:grid;grid-template-columns:1fr 1fr;position:relative;margin-bottom:34px}
+.st>div{width:calc(100% - 60px);padding:24px 28px;background:var(--gl);border:1px solid var(--line)}
+.st:nth-child(even)>div{grid-column:2;margin-left:60px}
+.st:nth-child(odd)>div{text-align:right}
+.st:before{content:"";position:absolute;left:50%;top:34px;width:14px;height:14px;margin-left:-7px;background:var(--bg);border:2px solid var(--mu);border-radius:50%;z-index:1;transition:.5s}
+.st.in:before{border-color:var(--ac);background:var(--ac);box-shadow:0 0 16px var(--ac)}
+.st b{font:500 2.6rem Oswald;color:var(--ac);opacity:.9;line-height:1}.st h3{font-size:1.25rem;margin-top:6px}.st p{color:var(--mu);font-size:.9rem}
+/* tech */
+#technology{background:var(--bg2);overflow:hidden}
+#technology:before{content:"";position:absolute;inset:0;background:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:48px 48px}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:50px;position:relative}
+.tc{border:1px solid var(--line);padding:22px;background:rgba(13,14,16,.7);transition:.4s}.tc:hover{border-color:var(--ac);transform:translateY(-5px)}
+.tc svg{width:100%;height:110px;margin-bottom:14px}.tc h3{font-size:1.05rem}.tc small{color:var(--mu);font-size:.82rem;display:block;margin-top:4px}
+.dg{stroke-dasharray:6 8;animation:dsh 8s linear infinite}@keyframes dsh{to{stroke-dashoffset:-140}}
+.rt{transform-origin:60px 55px;animation:rot 14s linear infinite}@keyframes rot{to{transform:rotate(360deg)}}
+/* why */
+.wl{margin-top:50px;border-top:1px solid var(--line)}
+.wi{display:flex;align-items:baseline;gap:26px;padding:22px 0;border-bottom:1px solid var(--line);transition:.4s;cursor:default}
+.wi span{color:var(--ac);font:400 .85rem Oswald;letter-spacing:.2em;min-width:34px}
+.wi h3{font-size:clamp(1.6rem,4.4vw,3.6rem);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55);transition:.4s}
+.wi p{margin-left:auto;color:var(--mu);max-width:22em;font-size:.9rem;opacity:.6;transition:.4s}
+.wi:hover{padding-left:20px;background:linear-gradient(90deg,rgba(217,164,65,.08),transparent)}.wi:hover h3{color:var(--tx);-webkit-text-stroke:0}.wi:hover p{opacity:1}
+/* stats band */
+.band{padding:70px 0;background:linear-gradient(120deg,#1c1710,#0d0e10);border-block:1px solid var(--line)}
+.bg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.bg b{font:500 clamp(2.4rem,5vw,4rem) Oswald;color:var(--ac);display:block;line-height:1.1}.bg small{color:var(--mu);letter-spacing:.14em;text-transform:uppercase;font-size:.75rem}
+/* testimonials */
+.cw{overflow:hidden;margin-top:50px}.ct{display:flex;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.sl{min-width:100%;padding:0 2px}.sl article{border:1px solid var(--line);padding:clamp(28px,5vw,56px);background:var(--gl);display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.av{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font:500 2rem Oswald;color:#111}
+.sl blockquote{font-size:clamp(1.05rem,2vw,1.4rem);line-height:1.6;margin-bottom:18px}.sl b{display:block}.sl small{color:var(--mu)}.stars{color:var(--ac);letter-spacing:4px;margin-bottom:10px}
+.cc{display:flex;align-items:center;gap:16px;margin-top:22px}.cc button{width:50px;height:50px;border:1px solid var(--line);background:none;cursor:pointer;font-size:1.2rem;transition:.3s}.cc button:hover{background:var(--ac);color:#111;border-color:var(--ac)}
+.pr{flex:1;height:2px;background:var(--line)}.pr i{display:block;height:100%;width:0;background:var(--ac)}
+/* contact */
+#contact{background:var(--bg2)}.cg{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;margin-top:40px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.f{display:flex;flex-direction:column;gap:6px}.f.w{grid-column:1/-1}
+label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+input,select,textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);padding:14px;min-height:48px;transition:.3s;width:100%;border-radius:0}
+select option{background:#15171a}input:focus,select:focus,textarea:focus{border-color:var(--ac);outline:none;background:rgba(217,164,65,.06)}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:#e5533d}.er{color:#ff8a76;font-size:.78rem;min-height:1em}
+.ok{display:none;border:1px solid var(--ac);padding:40px;text-align:center;background:rgba(217,164,65,.06)}.ok h3{color:var(--ac);font-size:1.8rem;margin-bottom:10px}
+.ci div{padding:20px 0;border-bottom:1px solid var(--line)}.ci small{color:var(--ac);letter-spacing:.2em;font-size:.7rem;text-transform:uppercase;display:block}
+.so{display:flex;gap:10px;margin-top:22px}.so a{width:44px;height:44px;border:1px solid var(--line);display:grid;place-items:center;font-size:.8rem;transition:.3s}.so a:hover{background:var(--ac);color:#111;border-color:var(--ac)}
+/* footer */
+footer{padding:80px 0 30px;background:#08090a;border-top:1px solid var(--line)}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}.fg h4{font:500 .8rem Oswald;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:16px}
+.fg li{list-style:none;margin-bottom:8px}.fg a,.fg p{color:var(--mu);font-size:.9rem}.fg a:hover{color:var(--tx)}
+.big{font:600 clamp(3rem,12vw,11rem) Oswald;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.1);text-align:center;line-height:1;margin:60px 0 20px;letter-spacing:.04em;overflow:hidden;white-space:nowrap}
+.cp{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mu);font-size:.82rem;border-top:1px solid var(--line);padding-top:24px}.cp a{margin-left:20px}
+/* responsive */
+@media(max-width:1080px){.links,.nq{display:none}.burger{display:block}.sg,.tg{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:1fr 1fr}
+.links.o{display:flex;position:fixed;inset:0;background:rgba(10,10,11,.98);flex-direction:column;justify-content:center;align-items:center;gap:8px;z-index:-1}.links.o a{font-size:1.2rem;padding:12px}.burger{z-index:2}}
+@media(max-width:860px){.hg,.ag,.cg{grid-template-columns:1fr}.sky{max-width:340px;justify-self:center;aspect-ratio:1;order:-1}.pg{grid-template-columns:repeat(2,1fr)}.ms{grid-template-columns:repeat(2,1fr)}.bg{grid-template-columns:repeat(2,1fr);gap:34px}.fcard{right:10px}.wi{flex-wrap:wrap}.wi p{margin-left:60px}
+.tl:before,.tl:after{left:14px}.st{grid-template-columns:1fr}.st:before{left:14px}.st>div,.st:nth-child(even)>div{grid-column:1;width:calc(100% - 44px);margin-left:44px;text-align:left!important}}
+@media(max-width:560px){.sg,.tg,.pg,form,.fg{grid-template-columns:1fr}.sl article{grid-template-columns:1fr}.av{width:72px;height:72px}.btn{width:100%;justify-content:center}.tb{flex-direction:row;flex-wrap:wrap;left:14px;top:auto;bottom:100px;justify-content:center}.info{top:56px}.stats b{font-size:2.3rem}.ms{grid-template-columns:1fr 1fr}.cp a{margin:0 16px 0 0}.hs button{padding:0 8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}h1 span em{transform:none}}
+</style>
+</head>
+<body>
+<div id="pl" aria-hidden="true"><div><b>[COMPANY NAME]</b><i></i></div></div>
+
+<header id="hd">
+<div class="wrap"><nav aria-label="Primary">
+<a href="#home" class="logo" aria-label="[COMPANY NAME] home">[COMPANY NAME]</a>
+<ul class="links" id="lk">
+<li><a href="#home">HOME</a></li><li><a href="#about">ABOUT</a></li><li><a href="#services">SERVICES</a></li><li><a href="#projects">PROJECTS</a></li><li><a href="#experience">3D EXPERIENCE</a></li><li><a href="#process">PROCESS</a></li><li><a href="#technology">TECHNOLOGY</a></li><li><a href="#contact">CONTACT</a></li>
+</ul>
+<a href="#contact" class="btn nq">Get a Quote</a>
+<button class="burger" id="bg" aria-label="Toggle menu" aria-expanded="false"><i></i></button>
+</nav></div>
+</header>
+
+<main>
+<section id="home" aria-label="Introduction">
+<div class="wrap hg">
+<div>
+<div class="eyebrow">Building &amp; Engineering Company</div>
+<h1><span><em>Building the future.</em></span><span><em>Engineering excellence.</em></span></h1>
+<p class="hp">We design and build exceptional residential, commercial and industrial spaces through precision engineering, advanced construction technology and uncompromising quality.</p>
+<div class="hb"><a class="btn" href="#projects">Explore Projects <span>→</span></a><a class="btn o" href="#contact">Start Your Project</a></div>
+</div>
+<a class="sky" href="#experience" aria-label="Open the interactive 3D building experience">
+<svg viewBox="0 0 400 500" class="sk" role="img" aria-label="Illustration of a modern tower under construction">
+<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#15171a"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9a441" stop-opacity=".9"/><stop offset="1" stop-color="#ff7a1a" stop-opacity=".2"/></linearGradient></defs>
+<rect x="40" y="380" width="320" height="6" fill="#d9a441" opacity=".6"/>
+<rect x="90" y="290" width="220" height="90" fill="url(#g1)" stroke="#555"/>
+<rect x="140" y="60" width="120" height="320" fill="url(#g1)" stroke="#d9a441" stroke-opacity=".7"/>
+<g stroke="#d9a441" stroke-opacity=".35"><path d="M140 100h120M140 140h120M140 180h120M140 220h120M140 260h120M140 300h120M140 340h120M180 60v320M220 60v320"/></g>
+<g fill="url(#g2)"><rect x="150" y="70" width="20" height="24"/><rect x="190" y="110" width="20" height="24"/><rect x="230" y="150" width="20" height="24"/><rect x="150" y="230" width="20" height="24"/><rect x="230" y="270" width="20" height="24"/></g>
+<path d="M280 60V20h90M330 20v50M370 20v30" stroke="#d9a441" stroke-width="3" fill="none"/><path d="M330 70v40" stroke="#fff" stroke-opacity=".5" class="dg"/>
+<path d="M100 300h200M100 340h200" stroke="#fff" stroke-opacity=".2"/><circle cx="200" cy="200" r="150" fill="none" stroke="#d9a441" stroke-opacity=".25" class="dg"/>
+</svg>
+<span class="tag">INTERACTIVE 3D EXPERIENCE</span>
+</a>
+</div>
+</section>
+
+<section id="about"><div class="wrap ag">
+<div class="rv">
+<div class="eyebrow">About Us</div>
+<h2>We build more than structures. We build legacies.</h2>
+<p class="sub">For over fifteen years we have delivered landmark residential, commercial and industrial buildings across South India. Our integrated team of architects, structural engineers and site professionals turns complex briefs into safe, beautiful and enduring places, on schedule and with complete transparency.</p>
+<div class="stats">
+<div><b data-c="15" data-s="+">0</b><small>Years Experience</small></div><div><b data-c="250" data-s="+">0</b><small>Projects Completed</small></div>
+<div><b data-c="180" data-s="+">0</b><small>Satisfied Clients</small></div><div><b data-c="50" data-s="+">0</b><small>Engineering Professionals</small></div>
+</div></div>
+<div class="aimg rv" role="img" aria-label="Architectural facade of a modern building"><div class="fc" style="background:var(--a)" id="ab"></div>
+<div class="fcard"><b>ISO 9001</b><p style="font-size:.86rem;color:#cfd0d2">Certified quality management across every site and every stage of delivery.</p></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">What We Do</div><h2 class="rv">Complete construction capability</h2>
+<p class="sub rv">Eight integrated disciplines under one accountable team.</p>
+<div class="sg" id="sg"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<div class="eyebrow">3D Experience</div><h2 class="rv">Walk around a building before it exists</h2>
+<p class="sub rv">Drag to rotate, scroll or pinch to zoom, and tap a hotspot to explore each zone of this procedurally generated mixed-use tower.</p>
+<div class="vw" id="vw">
+<canvas id="cv" aria-label="Interactive 3D model of a modern tower" tabindex="0"></canvas>
+<div class="fb" id="fb"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect x="150" y="40" width="100" height="220" fill="#22262d" stroke="#d9a441"/><rect x="100" y="180" width="200" height="80" fill="#1a1d22" stroke="#888"/><path d="M0 260h400" stroke="#d9a441"/></svg></div>
+<div class="vlab">INTERACTIVE 3D EXPERIENCE</div>
+<div class="tb" role="toolbar" aria-label="3D controls">
+<button id="bR" class="on" aria-pressed="true" title="Auto rotate">↻ Rotate</button><button id="bI" aria-label="Zoom in">+</button><button id="bO" aria-label="Zoom out">−</button><button id="bX">Reset</button><button id="bD" class="on" aria-pressed="true">☀ Day</button><button id="bN" aria-pressed="false">☾ Night</button><button id="bF">⛶ Fullscreen</button>
+</div>
+<div class="info" id="inf" role="status"><button id="ic" aria-label="Close panel">×</button><h3 id="it"></h3><p id="id"></p></div>
+<div class="hs" id="hs"></div>
+<div class="vl" id="vl"><div><small>LOADING ARCHITECTURAL EXPERIENCE</small><code id="lb">[░░░░░░░░░░░░░░░░] 0%</code><div class="bar"><i id="lf"></i></div><small id="ls">INITIALIZING 3D MODEL...</small><button class="btn" id="lg">Explore Building <span>→</span></button></div></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="eyebrow">Portfolio</div><h2 class="rv">Selected projects</h2>
+<div class="fl" id="fl" role="group" aria-label="Filter projects"></div>
+<div class="pg" id="pg"></div>
+</div></section>
+
+<section id="process" style="background:var(--bg2)"><div class="wrap">
+<div class="eyebrow">How We Work</div><h2 class="rv">From first conversation to final handover</h2>
+<div class="tl" id="tl"></div>
+</div></section>
+
+<section id="technology"><div class="wrap" style="position:relative">
+<div class="eyebrow">Technology &amp; Innovation</div><h2 class="rv">Engineered with data, delivered with precision</h2>
+<div class="tg" id="tg"></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+<div class="eyebrow">Why Choose Us</div><h2 class="rv">The standard we hold ourselves to</h2>
+<div class="wl" id="wl"></div>
+</div></section>
+
+<div class="band"><div class="wrap bg">
+<div><b data-c="2.4" data-d="1" data-s="M">0</b><small>Sq. Ft. Built</small></div><div><b data-c="98" data-s="%">0</b><small>On-Time Delivery</small></div>
+<div><b data-c="12" data-s="+">0</b><small>Industry Awards</small></div><div><b data-c="0" data-s="">0</b><small>Compromises on Safety</small></div>
+</div></div>
+
+<section id="testimonials"><div class="wrap">
+<div class="eyebrow">Testimonials</div><h2 class="rv">Trusted by those who build with us</h2>
+<div class="cw" id="cw"><div class="ct" id="ct"></div></div>
+<div class="cc"><button id="tp" aria-label="Previous testimonial">←</button><div class="pr"><i id="pi"></i></div><button id="tn" aria-label="Next testimonial">→</button></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="eyebrow">Contact</div><h2 class="rv">Let's build something exceptional.</h2>
+<div class="cg">
+<div>
+<form id="fm" novalidate>
+<div class="f"><label for="n">Full Name</label><input id="n" name="n" autocomplete="name" required><span class="er"></span></div>
+<div class="f"><label for="e">Email</label><input id="e" type="email" autocomplete="email" required><span class="er"></span></div>
+<div class="f"><label for="p">Phone Number</label><input id="p" type="tel" autocomplete="tel" required><span class="er"></span></div>
+<div class="f"><label for="t">Project Type</label><select id="t" required><option value="">Select type</option><option>Residential</option><option>Commercial</option><option>Industrial</option><option>Infrastructure</option><option>Renovation</option></select><span class="er"></span></div>
+<div class="f"><label for="l">Project Location</label><input id="l" required><span class="er"></span></div>
+<div class="f"><label for="b">Estimated Budget</label><select id="b" required><option value="">Select range</option><option>Under ₹1 Cr</option><option>₹1 – 5 Cr</option><option>₹5 – 25 Cr</option><option>₹25 Cr+</option></select><span class="er"></span></div>
+<div class="f w"><label for="m">Message</label><textarea id="m" rows="4" required></textarea><span class="er"></span></div>
+<div class="f w"><button class="btn" type="submit">Request Consultation <span>→</span></button></div>
+</form>
+<div class="ok" id="ok" role="status" tabindex="-1"><h3>Thank you.</h3><p>Your consultation request has been received. A senior project engineer will contact you within one business day.</p></div>
+</div>
+<div class="ci">
+<div><small>Head Office</small>Coimbatore, Tamil Nadu, India</div><div><small>Phone</small>+91 XXX XXX XXXX</div><div><small>Email</small>info@company.com</div><div><small>Working Hours</small>Monday – Saturday<br>9:00 AM – 6:00 PM</div>
+<div class="so"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">yt</a></div>
+</div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="fg">
+<div><a href="#home" class="logo">[COMPANY NAME]</a><p style="margin-top:16px;max-width:26em">Premium building construction and engineering, delivering residential, commercial and industrial projects with precision, safety and integrity.</p></div>
+<nav aria-label="Footer"><h4>Navigate</h4><ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">3D Experience</a></li><li><a href="#process">Process</a></li></ul></nav>
+<div><h4>Services</h4><ul><li><a href="#services">Residential</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">Industrial</a></li><li><a href="#services">Turnkey</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><p>Coimbatore, Tamil Nadu</p></li><li><p>+91 XXX XXX XXXX</p></li><li><p>info@company.com</p></li></ul><div class="so"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">f</a></div></div>
+</div>
+<div class="big" aria-hidden="true">[COMPANY NAME]</div>
+<div class="cp"><span>© <span id="yr"></span> [COMPANY NAME]. All rights reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms</a></span></div>
+</div></footer>
+
+<div class="md" id="md" role="dialog" aria-modal="true" aria-labelledby="mt"><button class="cl" id="mc" aria-label="Close project">×</button><div class="mh" id="mh"></div><article class="mb"><div class="eyebrow" id="mk"></div><h2 id="mt"></h2><p class="sub" id="mp"></p><div class="ms" id="ms"></div></article></div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function art(h){return "repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,transparent 2px 26px),repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 2px,transparent 2px 30px),linear-gradient(160deg,hsl("+h+" 35% 30%),hsl("+(h+20)+" 30% 9%))"}
+$("#ab").style.setProperty("--a",art(38));$("#yr").textContent=new Date().getFullYear();
+window.addEventListener("load",function(){setTimeout(function(){$("#pl").classList.add("h")},350)});
+/* data */
+var SV=[["⌂","Residential Construction","Modern homes, villas and apartment developments.",30],["▦","Commercial Construction","Corporate offices, retail buildings and commercial complexes.",210],["⚙","Industrial Construction","Factories, warehouses and industrial facilities.",10],["◈","Turnkey Projects","Complete design-to-handover project execution.",45],["△","Structural Engineering","Advanced structural design and engineering solutions.",200],["✦","Renovation & Remodeling","Modernization and transformation of existing buildings.",340],["═","Infrastructure","Roads, utilities, site development and supporting infrastructure.",120],["☑","Project Management","Professional planning, execution and quality management.",260]];
+$("#sg").innerHTML=SV.map(function(s,i){return '<article class="sc rv" style="--art:'+art(s[3])+'"><span class="n">0'+(i+1)+'</span><div class="ic" aria-hidden="true">'+s[0]+'</div><h3>'+s[1]+'</h3><p>'+s[2]+'</p><div class="ar" aria-hidden="true">→</div></article>'}).join("");
+var PJ=[["Skyline Residences","Coimbatore, Tamil Nadu","Residential",2026,35,"A 28-storey premium residential tower with sky gardens, a rooftop clubhouse and post-tensioned slabs for column-free living spaces.","3.2 lakh sq ft","G+28","34 months","Reinforced concrete frame"],["Meridian Business Park","Chennai, Tamil Nadu","Commercial",2025,210,"A LEED-targeted office campus with three interconnected blocks, double-skin glazing and a central landscaped atrium.","6.5 lakh sq ft","G+12","30 months","Steel-concrete composite"],["Apex Logistics Hub","Hosur, Tamil Nadu","Industrial",2024,15,"A high-bay automated warehouse and distribution facility with 14 m clear height and integrated dock systems.","4.8 lakh sq ft","Single level","16 months","Pre-engineered steel"],["Riverbend Expressway Link","Tiruppur, Tamil Nadu","Infrastructure",2025,150,"A 6.4 km four-lane corridor with two flyovers, storm-water drainage and utility ducts built under live traffic.","6.4 km","2 flyovers","26 months","Roadway & bridges"],["Heritage House Revival","Coonoor, Tamil Nadu","Renovation",2023,350,"Sensitive restoration and structural retrofit of a colonial-era estate into a boutique hospitality property.","28,000 sq ft","G+2","14 months","Retrofit & restoration"],["Aurum Villas","Bengaluru, Karnataka","Residential",2024,55,"Forty signature villas in a landscaped gated community with net-zero-ready envelopes and smart-home systems.","2.1 lakh sq ft","G+2","22 months","Load-bearing & RCC"]];
+var CATS=["ALL","RESIDENTIAL","COMMERCIAL","INDUSTRIAL","INFRASTRUCTURE","RENOVATION"];
+$("#fl").innerHTML=CATS.map(function(c,i){return '<button class="'+(i?"":"on")+'" data-f="'+c+'">'+c+'</button>'}).join("");
+$("#pg").innerHTML=PJ.map(function(p,i){return '<button class="pc rv" data-i="'+i+'" data-c="'+p[2].toUpperCase()+'" aria-label="Open '+p[0]+'"><div class="im" style="--art:'+art(p[4])+'"></div><div class="ov"><h3>'+p[0]+'</h3><p>'+p[1]+'</p><div class="m">'+p[2]+' | '+p[3]+'</div></div><span class="go" aria-hidden="true">↗</span></button>'}).join("");
+var pcs=$$(".pc");
+$("#fl").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;$$("#fl button").forEach(function(x){x.classList.toggle("on",x===b)});
+pcs.forEach(function(c){var m=b.dataset.f==="ALL"||c.dataset.c===b.dataset.f;if(m){c.style.display="";requestAnimationFrame(function(){c.classList.remove("hide")})}else{c.classList.add("hide");setTimeout(function(){if(c.classList.contains("hide"))c.style.display="none"},420)}})});
+var md=$("#md"),lastF=null;
+function openM(i){var p=PJ[i];lastF=document.activeElement;$("#mh").style.setProperty("--art",art(p[4]));$("#mk").textContent=p[2]+" · "+p[3];$("#mt").textContent=p[0];$("#mp").textContent=p[5];
+$("#ms").innerHTML=[["Location",p[1]],["Area",p[6]],["Floors",p[7]],["Duration",p[8]],["Construction",p[9]]].map(function(r){return "<div><small>"+r[0]+"</small><b>"+r[1]+"</b></div>"}).join("");
+md.classList.add("o");document.body.style.overflow="hidden";md.scrollTop=0;$("#mc").focus()}
+function closeM(){md.classList.remove("o");document.body.style.overflow="";if(lastF)lastF.focus()}
+$("#pg").addEventListener("click",function(e){var c=e.target.closest(".pc");if(c)openM(+c.dataset.i)});
+$("#mc").onclick=closeM;
+var PS=[["Consultation","Understanding your vision, budget and programme."],["Site Analysis","Surveys, soil investigation and feasibility studies."],["Architectural Design","Concept to detailed design with 3D visualisation."],["Structural Engineering","Analysis and optimisation of the structural system."],["Approvals","Statutory clearances and regulatory coordination."],["Construction","Disciplined site execution with BIM-led coordination."],["Quality Inspection","Multi-stage testing, audits and snagging."],["Project Handover","Documentation, training and long-term support."]];
+$("#tl").innerHTML=PS.map(function(s,i){return '<div class="st rv"><div><b>0'+(i+1)+'</b><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div></div>'}).join("");
+var TH=[["BIM","Coordinated digital models"],["3D Visualization","Photoreal design review"],["Structural Analysis","Finite-element simulation"],["Drone Monitoring","Aerial progress capture"],["Smart Building Systems","IoT-ready infrastructure"],["Digital Project Management","Real-time dashboards"],["Sustainable Construction","Low-carbon materials"],["Advanced Surveying","Laser scanning & GNSS"]];
+$("#tg").innerHTML=TH.map(function(t,i){var k=i%4,sv;
+if(k===0)sv='<rect x="30" y="20" width="60" height="70" fill="none" stroke="#d9a441"/><path d="M30 20l20-12h60l-20 12M110 8v70l-20 12" fill="none" stroke="#d9a441" class="dg"/><path d="M30 55h60M60 20v70" stroke="#888"/>';
+else if(k===1)sv='<g class="rt"><circle cx="60" cy="55" r="34" fill="none" stroke="#d9a441" class="dg"/><ellipse cx="60" cy="55" rx="34" ry="12" fill="none" stroke="#888"/><ellipse cx="60" cy="55" rx="12" ry="34" fill="none" stroke="#888"/></g>';
+else if(k===2)sv='<path d="M10 90L45 25l30 45 35-55" fill="none" stroke="#d9a441" stroke-width="2" class="dg"/><path d="M10 90h100M10 90V10" stroke="#888"/><circle cx="45" cy="25" r="3" fill="#d9a441"/><circle cx="75" cy="70" r="3" fill="#d9a441"/>';
+else sv='<circle cx="60" cy="55" r="38" fill="none" stroke="#888" stroke-dasharray="2 5"/><circle cx="60" cy="55" r="20" fill="none" stroke="#d9a441" class="dg"/><path d="M60 5v100M10 55h100" stroke="#888" stroke-opacity=".5"/><circle cx="60" cy="55" r="4" fill="#d9a441"/>';
+return '<article class="tc rv"><svg viewBox="0 0 120 110" aria-hidden="true">'+sv+'</svg><h3>'+t[0]+'</h3><small>'+t[1]+'</small></article>'}).join("");
+var WY=[["Quality First","Materials and workmanship verified at every stage."],["Engineering Precision","Tolerances measured, not assumed."],["Advanced Technology","BIM, drones and digital oversight."],["Safety","Zero-compromise site protocols."],["Transparency","Open costs and live progress reporting."],["On-Time Delivery","Schedules we commit to and keep."],["Sustainability","Efficient, low-impact buildings."],["Experienced Team","Specialists with decades on site."]];
+$("#wl").innerHTML=WY.map(function(w,i){return '<div class="wi rv"><span>0'+(i+1)+'</span><h3>'+w[0]+'</h3><p>'+w[1]+'</p></div>'}).join("");
+var TS=[["Rajesh Menon","Managing Director","Menon Developers","Delivered a 28-storey tower ahead of schedule with exceptional finishing. Their engineering discipline is unmatched in the region."],["Priya Natarajan","Head of Facilities","Meridian Corp","Communication was clear throughout, and the digital progress dashboard gave our board complete confidence."],["Arun Krishnan","Operations Director","Apex Logistics","Our warehouse was handed over on the promised date, on budget, and built to a standard we could measure."],["Dr. Lakshmi Iyer","Owner","Heritage House","They restored our estate with real care, blending modern structural safety with the original character."]];
+$("#ct").innerHTML=TS.map(function(t){var ini=t[0].replace("Dr. ","").split(" ").map(function(x){return x[0]}).join("");return '<div class="sl"><article><div class="av" aria-hidden="true">'+ini+'</div><div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“'+t[3]+'”</blockquote><b>'+t[0]+'</b><small>'+t[1]+', '+t[2]+'</small></div></article></div>'}).join("");
+var ti=0,tt,pi=$("#pi"),T0=0,DUR=6500,paused=false;
+function go(n){ti=(n+TS.length)%TS.length;$("#ct").style.transform="translateX(-"+ti*100+"%)";T0=performance.now()}
+$("#tn").onclick=function(){go(ti+1)};$("#tp").onclick=function(){go(ti-1)};
+$("#cw").addEventListener("mouseenter",function(){paused=true});$("#cw").addEventListener("mouseleave",function(){paused=false;T0=performance.now()});
+(function tick(now){if(!paused){var f=(now-T0)/DUR;pi.style.width=Math.min(f,1)*100+"%";if(f>=1)go(ti+1)}requestAnimationFrame(tick)})(performance.now());
+/* nav */
+var hd=$("#hd"),lk=$("#lk"),bg=$("#bg");
+addEventListener("scroll",function(){hd.classList.toggle("s",scrollY>60);var tl=$("#tl"),r=tl.getBoundingClientRect(),p=(innerHeight*.6-r.top)/r.height;tl.style.setProperty("--p",Math.max(0,Math.min(1,p)))},{passive:true});
+function menu(o){lk.classList.toggle("o",o);bg.classList.toggle("x",o);bg.setAttribute("aria-expanded",o);document.body.style.overflow=o?"hidden":""}
+bg.onclick=function(){menu(!lk.classList.contains("o"))};lk.addEventListener("click",function(e){if(e.target.closest("a"))menu(false)});
+var secs=$$("main section"),lks=$$("#lk a");
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){lks.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});secs.forEach(function(s){so.observe(s)});
+/* reveal + counters */
+function count(el){var to=+el.dataset.c,d=+el.dataset.d||0,s=el.dataset.s||"",t0=performance.now();(function f(n){var k=Math.min((n-t0)/1600,1),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(d)+s;if(k<1)requestAnimationFrame(f)})(t0)}
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");ro.unobserve(e.target)}})},{threshold:.15});
+$$(".rv").forEach(function(el,i){el.style.transitionDelay=(i%4)*70+"ms";ro.observe(el)});
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){RM?(e.target.textContent=e.target.dataset.c+(e.target.dataset.s||"")):count(e.target);co.unobserve(e.target)}})},{threshold:.6});$$("[data-c]").forEach(function(el){co.observe(el)});
+/* form */
+var fm=$("#fm");
+function chk(el){var f=el.closest(".f"),v=el.value.trim(),m="";
+if(!v)m="This field is required.";else if(el.type==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))m="Enter a valid email address.";else if(el.type==="tel"&&v.replace(/\D/g,"").length<8)m="Enter a valid phone number.";else if(el.id==="m"&&v.length<10)m="Please share a few more details.";
+f.classList.toggle("bad",!!m);f.querySelector(".er").textContent=m;el.setAttribute("aria-invalid",!!m);return !m}
+$$("input,select,textarea",fm).forEach(function(el){el.addEventListener("blur",function(){chk(el)});el.addEventListener("input",function(){if(el.closest(".f").classList.contains("bad"))chk(el)})});
+fm.addEventListener("submit",function(e){e.preventDefault();var bad=null;$$("input,select,textarea",fm).forEach(function(el){if(!chk(el)&&!bad)bad=el});if(bad){bad.focus();return}fm.style.display="none";var ok=$("#ok");ok.style.display="block";ok.focus()});
+addEventListener("keydown",function(e){if(e.key==="Escape"){if(md.classList.contains("o"))closeM();else menu(false)}});
+/* 3D */
+var vl=$("#vl"),lf=$("#lf"),lb=$("#lb"),ls=$("#ls"),lg=$("#lg");
+function prog(p){lf.style.width=p+"%";var n=Math.round(p/100*16);lb.textContent="["+"█".repeat(n)+"░".repeat(16-n)+"] "+p+"%"}
+function fallback(){$("#fb").style.display="block";vl.classList.add("h");$("#cv").style.display="none";$(".tb").style.display="none";$("#hs").style.display="none"}
+lg.onclick=function(){vl.classList.add("h")};
+var started=false;
+function boot(){if(started)return;started=true;prog(8);
+if(typeof THREE==="undefined"){var n=0,w=setInterval(function(){if(typeof THREE!=="undefined"){clearInterval(w);run()}else if(++n>40){clearInterval(w);fallback()}},150)}else run()}
+function run(){try{init3D()}catch(err){console.warn("3D unavailable",err);fallback()}}
+new IntersectionObserver(function(es,o){if(es[0].isIntersecting){o.disconnect();boot()}},{rootMargin:"300px"}).observe($("#vw"));
+function init3D(){
+var box=$("#vw"),cv=$("#cv"),mob=innerWidth<768,FL=mob?10:16,H=FL*3,vis=true;
+var R=new THREE.WebGLRenderer({canvas:cv,antialias:!mob,powerPreference:"high-performance"});
+R.setPixelRatio(Math.min(devicePixelRatio||1,mob?1.5:2));R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.shadowMap.enabled=!mob;R.shadowMap.type=THREE.PCFSoftShadowMap;
+var S=new THREE.Scene(),skyD=new THREE.Color(0x9fd0f2),skyN=new THREE.Color(0x050914),cam=new THREE.PerspectiveCamera(42,1,.5,600);
+S.background=skyD.clone();S.fog=new THREE.Fog(0x9fd0f2,110,260);
+var hemi=new THREE.HemisphereLight(0xcfe8ff,0x6b7a5a,.8);S.add(hemi);
+var sun=new THREE.DirectionalLight(0xfff1d6,1.3);sun.position.set(60,90,50);sun.castShadow=!mob;sun.shadow.mapSize.set(1024,1024);var sc=sun.shadow.camera;sc.left=sc.bottom=-70;sc.right=sc.top=70;sc.near=10;sc.far=250;S.add(sun);
+var moon=new THREE.DirectionalLight(0x6f86c8,0);moon.position.set(-50,70,-30);S.add(moon);
+var M=function(c,o){o=o||{};o.color=c;return new THREE.MeshStandardMaterial(o)};
+var conc=M(0xb9b7b2,{roughness:.85}),dark=M(0x2a2c30,{roughness:.6}),gold=M(0xd9a441,{roughness:.4,metalness:.6});
+function facade(lit){var c=document.createElement("canvas");c.width=c.height=512;var x=c.getContext("2d");x.fillStyle=lit?"#000":"#26384f";x.fillRect(0,0,512,512);
+for(var r=0;r<8;r++)for(var k=0;k<8;k++){if(lit){if(Math.random()<.55){x.fillStyle=Math.random()<.5?"#ffd58a":"#fff1cf";x.fillRect(k*64+6,r*64+8,52,48)}}else{var g=x.createLinearGradient(0,r*64,0,r*64+64);g.addColorStop(0,"#5f86ab");g.addColorStop(1,"#22364d");x.fillStyle=g;x.fillRect(k*64+6,r*64+8,52,48);x.fillStyle="#7fa2c3";x.fillRect(k*64+6,r*64+8,52,3)}}
+var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1,FL/8);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;return t}
+var glassM=new THREE.MeshStandardMaterial({map:facade(false),emissiveMap:facade(true),emissive:0xffffff,emissiveIntensity:0,metalness:.55,roughness:.2});
+var lobbyM=new THREE.MeshStandardMaterial({color:0x3b5a78,emissive:0xffd58a,emissiveIntensity:0,metalness:.5,roughness:.15,transparent:true,opacity:.85});
+var bulbs=[];
+function add(g,m,x,y,z,sh){var o=new THREE.Mesh(g,m);o.position.set(x,y,z);o.castShadow=sh!==false;o.receiveShadow=true;S.add(o);return o}
+var B=function(w,h,d){return new THREE.BoxGeometry(w,h,d)};
+prog(25);
+var ground=add(new THREE.PlaneGeometry(500,500),M(0x5e7a4a,{roughness:1}),0,0,0,false);ground.rotation.x=-Math.PI/2;
+add(B(46,.2,34),M(0xa8a6a0,{roughness:.9}),0,.1,4,false);
+/* podium + tower */
+add(B(32,4,22),conc,0,2.2,0);add(B(33,.4,23),dark,0,4.35,0);
+var lob=add(B(22,3.2,.3),lobbyM,0,2.3,11.1,false);
+for(var i=-2;i<=2;i++)add(B(.3,3.4,.5),dark,i*5.5,2.3,11.2);
+add(B(9,.4,5),gold,0,4,13.4);add(B(.4,3.8,.4),dark,-4,2.1,15.3);add(B(.4,3.8,.4),dark,4,2.1,15.3);add(B(3,3,.2),dark,0,1.7,11.3);
+var tower=add(B(16,H,12),glassM,0,4.5+H/2,0);
+for(var f=0;f<=FL;f++)add(B(16.6,.3,12.6),conc,0,4.5+f*3,0);
+[[-8,-6],[8,-6],[-8,6],[8,6]].forEach(function(p){add(B(.7,H,.7),conc,p[0],4.5+H/2,p[1])});
+for(var f2=2;f2<FL;f2+=2){add(B(12,.25,1.8),conc,0,4.5+f2*3,6.9);var rl=add(B(12,.9,.06),new THREE.MeshStandardMaterial({color:0x9fc4e0,transparent:true,opacity:.4,metalness:.3,roughness:.1}),0,4.5+f2*3+.6,7.75,false)}
+var edges=new THREE.LineSegments(new THREE.EdgesGeometry(B(16.2,H,12.2)),new THREE.LineBasicMaterial({color:0xd9a441,transparent:true,opacity:.15}));edges.position.set(0,4.5+H/2,0);S.add(edges);
+/* roof */
+var ry=4.5+H;add(B(17,1,13),conc,0,ry+.5,0);add(B(9,3,6),M(0x9fc4e0,{transparent:true,opacity:.55,metalness:.5,roughness:.1,emissive:0xffd58a,emissiveIntensity:0}),-2.5,ry+2.5,0);
+var roofG=add(B(6,.3,10),M(0x4f7a3f),4.5,ry+1.1,0);add(new THREE.CylinderGeometry(1,1,2.2,14),dark,5,ry+2.2,-3.5);add(new THREE.CylinderGeometry(.08,.08,10,6),dark,-5,ry+6,-4);
+var beacon=add(new THREE.SphereGeometry(.3,10,8),new THREE.MeshBasicMaterial({color:0xff3b2f}),-5,ry+11,-4,false);
+prog(50);
+/* parking */
+add(B(24,.1,20),M(0x2b2c2f,{roughness:.95}),-34,.15,6,false);
+for(var pk=0;pk<7;pk++)add(B(.15,.02,5),M(0xffffff),-43+pk*3.4,.25,10,false);
+var cc=[0xb32424,0x24427a,0xdddddd,0x222222,0x777777,0xd9a441];
+for(var c=0;c<(mob?4:6);c++){var cx=-41.3+c*3.4;add(B(2,.8,4.2),M(cc[c],{metalness:.6,roughness:.3}),cx,.7,10);add(B(1.8,.6,2.2),dark,cx,1.3,10.1)}
+add(B(24,.5,.5),conc,-34,.4,-3.7);
+/* street */
+var st=add(B(500,.05,14),M(0x1f2023,{roughness:.9}),0,.06,32,false);st.castShadow=false;
+for(var d=-20;d<20;d++)add(B(3,.02,.25),M(0xeeeeee),d*8,.1,32,false);
+add(B(500,.2,3),M(0xa8a6a0),0,.12,23,false);
+for(var l=-4;l<=4;l++){var lx=l*18;add(new THREE.CylinderGeometry(.12,.15,7,6),dark,lx,3.5,24.5);var b=add(new THREE.SphereGeometry(.45,8,6),new THREE.MeshStandardMaterial({color:0x333333,emissive:0xffe2a0,emissiveIntensity:0}),lx,7.2,24.5,false);bulbs.push(b.material)}
+[[-16,13.6],[16,13.6],[-14,-13],[14,-13]].forEach(function(p){var a=add(new THREE.CylinderGeometry(.1,.1,.6,6),dark,p[0],.5,p[1],false);var e=add(new THREE.SphereGeometry(.25,8,6),new THREE.MeshStandardMaterial({color:0x333333,emissive:0xd9a441,emissiveIntensity:0}),p[0],1,p[1],false);bulbs.push(e.material)});
+/* trees */
+var lm=M(0x3f7a3a,{roughness:1}),tm=M(0x5a3f28),tp=[[-20,16],[20,16],[-27,20],[27,20],[36,8],[38,-8],[-20,-16],[0,-18],[22,-15],[-44,-10],[46,4],[10,17]];if(mob)tp=tp.slice(0,8);
+tp.forEach(function(p){var s=.8+Math.random()*.5;add(new THREE.CylinderGeometry(.25,.35,2.4*s,6),tm,p[0],1.2*s,p[1]);add(new THREE.IcosahedronGeometry(2.2*s,0),lm,p[0],3.6*s,p[1])});
+for(var h=-1;h<=1;h+=2)add(B(9,.8,1.6),M(0x3d6a35),h*11,.5,15);
+/* stars */
+var stp=[];for(var i2=0;i2<(mob?150:350);i2++){var th=Math.random()*6.283,ph=Math.random()*1.2;stp.push(300*Math.cos(th)*Math.sin(ph+.2),300*Math.cos(ph+.2)+20,300*Math.sin(th)*Math.sin(ph+.2))}
+var sg=new THREE.BufferGeometry();sg.setAttribute("position",new THREE.Float32BufferAttribute(stp,3));var stars=new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:1.4,transparent:true,opacity:0,fog:false}));S.add(stars);
+prog(78);
+/* highlight */
+var hl=new THREE.LineSegments(new THREE.EdgesGeometry(B(1,1,1)),new THREE.LineBasicMaterial({color:0xffb020}));hl.visible=false;S.add(hl);
+var hf=new THREE.Mesh(B(1,1,1),new THREE.MeshBasicMaterial({color:0xffb020,transparent:true,opacity:.14,depthWrite:false}));hf.visible=false;S.add(hf);
+/* hotspots */
+var HS=[
+{n:"ENTRANCE",t:"Grand Entrance",d:"A double-height canopy entrance with granite paving, bronze detailing and step-free access for every visitor.",cam:[6,6,30],tg:[0,2.8,12],bx:[0,3,13.4,9,5,5]},
+{n:"LOBBY",t:"Smart Lobby",d:"Designed with premium materials, intelligent access control and energy-efficient lighting.",cam:[-14,5,26],tg:[0,2.4,10],bx:[0,2.4,10.5,22,3.6,2]},
+{n:"PARKING",t:"Parking Area",d:"Covered and open bays with EV charging provision, smart barrier entry and dedicated visitor parking.",cam:[-14,18,32],tg:[-34,1,6],bx:[-34,1,6,24,2.2,20]},
+{n:"OFFICE",t:"Office Floors",d:"Column-free, flexible floor plates with floor-to-ceiling glazing, raised floors and high-efficiency HVAC.",cam:[30,16,34],tg:[0,4.5+H*.25,4],bx:[0,4.5+H*.25,0,16.6,H*.45,12.6]},
+{n:"RESIDENTIAL",t:"Residential Levels",d:"Sky homes with private balconies, acoustic glazing and panoramic city views across the upper levels.",cam:[32,4.5+H*.75,32],tg:[0,4.5+H*.75,4],bx:[0,4.5+H*.75,0,16.6,H*.42,12.6]},
+{n:"ROOFTOP",t:"Rooftop Retreat",d:"A landscaped sky terrace with glazed pavilion, solar-ready roofing and rainwater harvesting.",cam:[22,ry+12,24],tg:[0,ry+2,0],bx:[0,ry+2,0,17,3.6,13]}];
+var hsE=$("#hs"),dots=[],chips=[],act=-1;
+HS.forEach(function(h,i){var ch=document.createElement("button");ch.textContent=h.n;ch.onclick=function(){pick(i)};hsE.appendChild(ch);chips.push(ch);
+var dt=document.createElement("button");dt.className="dot";dt.setAttribute("aria-label","Explore "+h.n);dt.onclick=function(){pick(i)};box.appendChild(dt);dots.push(dt);h.v=new THREE.Vector3(h.bx[0],h.bx[1],h.bx[2])});
+/* camera state */
+var cur={t:.8,p:1.2,r:105,x:0,y:22,z:0},goal={t:.8,p:1.2,r:105,x:0,y:22,z:0},D0=JSON.parse(JSON.stringify(goal));
+var auto=true,drag=false,px=0,py=0,mx=0,my=0,idle=0,ptrs={},pd=0;
+function setCam(pos,tg){var o=new THREE.Vector3(pos[0]-tg[0],pos[1]-tg[1],pos[2]-tg[2]),r=o.length();goal.r=r;goal.t=Math.atan2(o.x,o.z);goal.p=Math.acos(o.y/r);goal.x=tg[0];goal.y=tg[1];goal.z=tg[2]}
+function nearT(){var d=goal.t-cur.t;d=Math.atan2(Math.sin(d),Math.cos(d));goal.t=cur.t+d}
+function pick(i){act=i;chips.forEach(function(c,k){c.classList.toggle("on",k===i)});var h=HS[i];setCam(h.cam,h.tg);nearT();auto=false;$("#bR").classList.remove("on");$("#bR").setAttribute("aria-pressed","false");
+$("#it").textContent=h.t;$("#id").textContent=h.d;$("#inf").classList.add("o");hl.position.set(h.bx[0],h.bx[1],h.bx[2]);hl.scale.set(h.bx[3],h.bx[4],h.bx[5]);hf.position.copy(hl.position);hf.scale.copy(hl.scale);hl.visible=hf.visible=true}
+function closeI(){act=-1;chips.forEach(function(c){c.classList.remove("on")});$("#inf").classList.remove("o");hl.visible=hf.visible=false;goal.x=D0.x;goal.y=D0.y;goal.z=D0.z}
+$("#ic").onclick=closeI;
+function reset(){closeI();Object.assign(goal,D0);nearT();auto=true;$("#bR").classList.add("on");$("#bR").setAttribute("aria-pressed","true")}
+$("#bX").onclick=reset;
+$("#bR").onclick=function(){auto=!auto;this.classList.toggle("on",auto);this.setAttribute("aria-pressed",auto)};
+$("#bI").onclick=function(){goal.r=Math.max(18,goal.r*.8)};$("#bO").onclick=function(){goal.r=Math.min(170,goal.r*1.25)};
+$("#bF").onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else if(box.requestFullscreen)box.requestFullscreen().catch(function(){box.classList.toggle("fs")});else box.classList.toggle("fs")};
+document.addEventListener("fullscreenchange",resize);
+var night=0,nGoal=0;function setN(v){nGoal=v;$("#bD").classList.toggle("on",!v);$("#bN").classList.toggle("on",!!v);$("#bD").setAttribute("aria-pressed",!v);$("#bN").setAttribute("aria-pressed",!!v)}
+$("#bD").onclick=function(){setN(0)};$("#bN").onclick=function(){setN(1)};
+/* input */
+cv.addEventListener("pointerdown",function(e){cv.setPointerCapture(e.pointerId);ptrs[e.pointerId]={x:e.clientX,y:e.clientY};drag=true;px=e.clientX;py=e.clientY;idle=0});
+cv.addEventListener("pointermove",function(e){var r=cv.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5;if(!ptrs[e.pointerId])return;ptrs[e.pointerId]={x:e.clientX,y:e.clientY};var ids=Object.keys(ptrs);
+if(ids.length===2){var a=ptrs[ids[0]],b=ptrs[ids[1]],d=Math.hypot(a.x-b.x,a.y-b.y);if(pd)goal.r=Math.min(170,Math.max(18,goal.r*pd/d));pd=d}
+else{goal.t-=(e.clientX-px)*.006;goal.p=Math.min(1.5,Math.max(.25,goal.p-(e.clientY-py)*.005));px=e.clientX;py=e.clientY}idle=0});
+function up(e){delete ptrs[e.pointerId];pd=0;drag=Object.keys(ptrs).length>0;var k=Object.keys(ptrs)[0];if(k){px=ptrs[k].x;py=ptrs[k].y}}
+cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",up);cv.addEventListener("pointerleave",function(){mx=my=0});
+cv.addEventListener("wheel",function(e){e.preventDefault();goal.r=Math.min(170,Math.max(18,goal.r*(1+e.deltaY*.001)))},{passive:false});
+cv.addEventListener("keydown",function(e){var k=e.key;if(k==="ArrowLeft")goal.t-=.1;else if(k==="ArrowRight")goal.t+=.1;else if(k==="ArrowUp")goal.p=Math.max(.25,goal.p-.06);else if(k==="ArrowDown")goal.p=Math.min(1.5,goal.p+.06);else if(k==="+"||k==="=")goal.r*=.85;else if(k==="-")goal.r*=1.15;else return;e.preventDefault()});
+/* resize */
+function resize(){var w=box.clientWidth,h=box.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+resize();new ResizeObserver(resize).observe(box);
+new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(box);
+/* loop */
+var tmp=new THREE.Vector3(),cs=new THREE.Color(),clock=new THREE.Clock(),W=innerWidth;
+function frame(){requestAnimationFrame(frame);if(!vis||document.hidden)return;var dt=Math.min(clock.getDelta(),.05),k=1-Math.pow(.001,dt*(RM?3:1)),t=clock.elapsedTime;
+if(auto&&!drag&&!RM&&act<0)goal.t+=dt*.12;
+["t","p","r","x","y","z"].forEach(function(a){cur[a]+=(goal[a]-cur[a])*k*1.6});
+night+=(nGoal-night)*Math.min(1,dt*2.2);
+var sp=Math.sin(cur.p),pos=tmp.set(cur.x+cur.r*sp*Math.sin(cur.t+mx*.12),cur.y+cur.r*Math.cos(cur.p)-my*3,cur.z+cur.r*sp*Math.cos(cur.t+mx*.12));cam.position.copy(pos);cam.lookAt(cur.x,cur.y,cur.z);
+cs.copy(skyD).lerp(skyN,night);S.background.copy(cs);S.fog.color.copy(cs);
+sun.intensity=1.3*(1-night)+.02;hemi.intensity=.8-.62*night;moon.intensity=.55*night;glassM.emissiveIntensity=night*1.3;lobbyM.emissiveIntensity=.15+night*1.2;
+bulbs.forEach(function(m){m.emissiveIntensity=night*3});edges.material.opacity=.15+night*.75;stars.material.opacity=night*.9;beacon.visible=Math.sin(t*4)>0;
+ground.material.color.setHex(0x5e7a4a).multiplyScalar(1-night*.75);
+if(hl.visible){var s=.5+.5*Math.sin(t*4);hf.material.opacity=.08+.14*s}
+var w=box.clientWidth,h=box.clientHeight;
+for(var i=0;i<HS.length;i++){tmp.copy(HS[i].v).project(cam);var d=dots[i],on=tmp.z<1&&act!==i&&tmp.x>-1&&tmp.x<1&&tmp.y>-1&&tmp.y<1&&!mob||(mob&&tmp.z<1&&act!==i&&Math.abs(tmp.x)<1&&Math.abs(tmp.y)<1);d.style.display=on?"block":"none";if(on){d.style.left=(tmp.x*.5+.5)*w+"px";d.style.top=(-tmp.y*.5+.5)*h+"px"}}
+R.render(S,cam)}
+prog(100);ls.textContent="MODEL READY";
+requestAnimationFrame(function(){frame();lg.style.display="inline-flex";if(RM)vl.classList.add("h");});
+}
+})();
+</script>
+</body>
+</html>
